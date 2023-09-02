@@ -1,6 +1,7 @@
 import CommunityCard from "@/components/Cards/CommunityCard";
 import UserCard from "@/components/Cards/UserCard";
 import ProfileHeader from "@/components/shared/ProfileHeader";
+import Searchbar from "@/components/shared/Searchbar";
 import ThreadsTab from "@/components/shared/ThreadsTab";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { profileTabs } from "@/constants";
@@ -31,6 +32,9 @@ async function Page(){
         <h1 className='head-text mb-10'>Search</h1>
 
         {/* Search Bar */}
+        <div className='mt-5'>
+          <Searchbar routeType='communities' />
+        </div>
 
         <div className="mt-14 flex flex-col gap-9">
         {result.communities.length === 0 ? (
